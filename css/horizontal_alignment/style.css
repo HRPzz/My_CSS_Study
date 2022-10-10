@@ -1,0 +1,64 @@
+ul {
+    border: 1px solid red;
+}
+
+li {
+    border: 1px solid #fff;
+}
+
+/* [가로 정렬 방법] */
+/*
+    1. display: inline
+    - li 의 display 속성은 block 이라서 inline 으로 강제로 변경시킴
+    - 단점: inline 요소는 width, height 가질 수 없음 => 비권장 방법
+*/
+.menus1 > li {
+    display: inline;
+}
+
+/*
+    2. float: left
+    - display 속성을 block 으로 그대로 유지하므로 width, height 설정 가능
+    - 단점: 세로 중앙 정렬하려면 margin, padding 을 계산해서 설정해야 함
+*/
+.menus2 > li {
+    float: left;
+    width: 100px;
+}
+
+/*
+    3. display: flex;
+    - 부모에 설정하면 자식 요소들이 좌우 정렬됨 (only 한 방향)
+    - 세로 중앙 정렬은 align-items: center 설정
+    - 가로 중앙 정렬은 justify-content: center 설정
+    - 가로 양끝에 붙어서 정렬은 justify-content: space-between 설정
+    - 가로 양끝에서 떨어져서 정렬은 justify-content: space-around 설정
+*/
+.menus3 {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 300px;
+    justify-content: space-around; /* 가로 양끝에서 떨어져서 정렬 */
+}
+
+/*
+    4. display: grid
+    - 부모에 설정하면 자식 요소를 상하 좌우 동시에 정렬 가능
+    - c.f. IE10 이상을 지원하는 프로젝트라면 사용하는데 제약없음
+    - 좌우 정렬은 grid-template-columns: repeat(4, 1fr) 설정
+    - 그리드 요소 간 간격 주려면 grid-gap: 10px 설정
+    - 그리드는 좌상단 꼭지점을 기준으로 번호를 매김(1번부터 시작)
+*/
+.menus4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 좌우 정렬 */
+    grid-gap: 10px; /* 그리드 요소 간 간격 */
+    width: 300px;
+}
+.menus4 > li:nth-child(2) {
+    grid-column: 2/5; /* 그리드 가로 공간 꼭지점 2번부터 5번까지 차지 */
+    grid-row: 1/3; /* 그리드 세로 공간 꼭지점 1번부터 3번까지 차지 */
+}
+.menus4 > li:nth-child(4) {
+    grid-column: 1/5;
+}
