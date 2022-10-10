@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>background-attachment</title>
+
+        <style>
+            .list {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 0.2rem;
+                grid-auto-columns: minmax(100px, auto);
+                grid-auto-rows: minmax(100px, auto);
+                list-style-type: none;
+            }
+
+            li {
+                background: url("sunrise.jpg") no-repeat center;
+                background-size: cover;
+                background-attachment: fixed; /* 여러 개 요소가 하나의 이미지 보여줌 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>
