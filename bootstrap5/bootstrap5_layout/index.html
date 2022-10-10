@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap5</title>
+
+        <!-- scss -> (live sass compiler) -> css -->
+        <link rel="stylesheet" href="css/main.min.css" />
+
+        <!-- 부트스트랩 아이콘 -->
+        <link
+            rel="stylesheet"
+            href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+        />
+    </head>
+    <body>
+        <!-- small width => flex-column -->
+        <!-- middle width => flex-md-row -->
+        <header
+            class="d-flex flex-column flex-md-row p-3 bg-primary align-items-center"
+        >
+            <h1 class="h5 my-0 me-md-auto">Bootstrap</h1>
+            <nav class="my-2 my-md-0 me-md-4">
+                <a href="#">
+                    <!-- 부트스트랩 아이콘 -->
+                    <i class="bi bi-app-indicator cfs-2 p-1"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-award-fill cfs-2 p-1"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-book-fill cfs-2 p-1"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-box cfs-2 p-1"></i>
+                </a>
+            </nav>
+            <button class="btn btn-outline-light">Sign up</button>
+        </header>
+
+        <section class="container">
+            <div class="p-3 pt-md-5 pb-md-4 text-center">
+                <h2 class="cfs-3">Bootstrap</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Aliquam accusamus, blanditiis atque nemo corrupti
+                    repudiandae soluta at est accusantium rerum consectetur
+                    vero. Animi perspiciatis officiis perferendis iste cumque
+                    pariatur error?
+                </p>
+            </div>
+            <div class="row g-3 mb-5 my-3 text-center">
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <div class="card-header">JS</div>
+                        <div class="card-body">
+                            <h3 class="card-title text-primary h1">
+                                No Jquery
+                            </h3>
+                            <ul class="list-unstyled my-4">
+                                <li>no Jquery</li>
+                                <li>Jquery GoodBye</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline-primary m-3 mt-0">
+                            Try Bootstrap5
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <div class="card-header">Browser</div>
+                        <div class="card-body">
+                            <h3 class="card-title text-primary h1">No IE</h3>
+                            <ul class="list-unstyled my-4">
+                                <li>no IE</li>
+                                <li>IE GoodBye</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary m-3 mt-0">
+                            Try Bootstrap5
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <div class="card-header">Customizing</div>
+                        <div class="card-body">
+                            <h3 class="card-title text-primary h1">
+                                Utilities
+                            </h3>
+                            <ul class="list-unstyled my-4">
+                                <li>Use SCSS</li>
+                                <li>Better Product</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary m-3 mt-0">
+                            Try Bootstrap5
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
