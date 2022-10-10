@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap5</title>
+
+        <!-- scss -> (live sass compiler) -> css -->
+        <link rel="stylesheet" href="css/main.min.css" />
+    </head>
+    <body>
+        <h1 class="text-primary">Bootstrap5</h1>
+        <h1 class="text-secondary">Bootstrap5</h1>
+        <h1 class="text-danger">Bootstrap5</h1>
+
+        <button class="btn btn-primary p-3">Button</button>
+        <button class="btn btn-primary bp-3">Button</button>
+
+        <!-- 부트스트랩 grid -->
+        <div class="row">
+            <!-- breakpoint - 12칸 기준 -->
+            <!-- small width => col-12 -->
+            <!-- middle width => col-md-12 -->
+            <!-- large width => col-lg-12 -->
+            <div class="col-12 col-md-6 col-lg-4 bg-success">1</div>
+            <div class="col-6 col-md-5 col-lg-4 bg-dark">2</div>
+            <div class="col-6 col-md-1 col-lg-4 bg-danger">3</div>
+        </div>
+    </body>
+</html>
