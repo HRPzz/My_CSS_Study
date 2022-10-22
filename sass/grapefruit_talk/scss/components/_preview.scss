@@ -1,0 +1,35 @@
+.preview {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 16px;
+    background-color: #fff;
+
+    .preview__pic {
+        @include set-box-size(50px, 50px, 18px); // mixin 불러오기
+
+        background: $main-color;
+        margin-right: 10px;
+    }
+    .preview__nick {
+        margin: 5px;
+        font-size: 0.9em; // 14.4px
+    }
+    .preview__message {
+        overflow: hidden; // 내용이 많으면 넘치는 부분 감춤
+        width: 50vw;
+        margin: 5px;
+        font-size: 0.8em; // 12.8px
+        color: #aeaeae;
+        text-overflow: ellipsis; // 텍스트가 넘치면 ... 으로 표시
+        white-space: nowrap; // 공백 여러 개일 경우 하나로 처리
+    }
+    .preview__time {
+        position: absolute; // 가장 가까운 상위 position 요소 (.preview) 를 기준으로 오프셋 적용
+        top: 10px;
+        right: 16px;
+        font-size: 0.8em; // 12.8px
+        color: #aeaeae;
+    }
+}
