@@ -1,0 +1,12 @@
+* {
+    font-family: "NanumBarunpen";
+    box-sizing: border-box; // 패딩 추가해도 요소가 커지지 않음
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    min-width: 300px; // body 너비가 300px 보다 작아지지 않음
+}
