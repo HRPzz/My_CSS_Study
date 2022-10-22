@@ -1,13 +1,14 @@
 .nav__list {
+    @include set-box-size(100%, 70px); // mixin 불러오기
+
     position: fixed; // 문서 흐름에서 제외, 고정시킴
     top: 0;
     left: 0;
     margin: 0;
     padding: 0;
-    width: 70px;
-    height: 100%;
     background-color: #f1f1f1;
     list-style-type: none;
+    z-index: 20; // 요소가 겹칠 때 무엇을 위(z축)에 둘 것인가
 
     .nav__btn {
         padding: 16px 0;

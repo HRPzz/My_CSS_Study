@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky; // 스크롤 내려도 헤더 고정됨
+    top: 0;
+    padding: 12px;
+    background-color: #fff;
+    line-height: 36px;
+    z-index: 10; // 요소가 겹칠 때 무엇을 위(z축)에 둘 것인가
+
+    .header__title {
+        margin: 0;
+        font: 1em;
+    }
+}
+.header__menu {
+    span {
+        @include set-box-size(36px, 36px, 18px); // mixin 불러오기
+
+        display: inline-block;
+        text-align: center;
+
+        &:hover {
+            background-color: #eaeaea;
+        }
+    }
+}

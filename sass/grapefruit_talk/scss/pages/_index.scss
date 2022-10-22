@@ -31,8 +31,8 @@
     margin: 0 auto 80px;
 
     input {
-        width: 240px;
-        height: 40px;
+        @include set-box-size(40px, 240px); // mixin 불러오기
+
         border: 1px solid #bdbdbd;
         font-size: 0.9em; // 14.4px
 
